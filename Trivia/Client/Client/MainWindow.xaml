@@ -1,0 +1,45 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Button x:Name="ExitsBtn" Content="exit" Height="45" Width="45" Margin="0,375,745,0" Background="Turquoise" Foreground="Crimson" Click="exit_btn"></Button>
+        <GroupBox x:Name="grbx_key_pad" Header="Key Pad" HorizontalAlignment="Left" Height="220" Margin="26,10,0,0" VerticalAlignment="Top" Width="189">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name ="LoginBtn" Content="Login" Click="Button_Click" Grid.Column="0" Height="197" VerticalAlignment="Center"/>
+                <Button x:Name="SignUpBtn" Content="signUp" Click="SignUp_click" Margin="88,0,0,0" Grid.ColumnSpan="2"/>
+            </Grid>
+        </GroupBox>
+        <Image HorizontalAlignment="Left" Height="100" Margin="220,20,0,0" VerticalAlignment="Top" Width="100" Source="C:\Users\noam\Downloads\aacsjdlfksd.png"/>
+        <GroupBox x:Name="RoomsAndStats" Header="Rooms and Stats bitch" HorizontalAlignment="Right" Height="220" Margin="26,10,0,0" VerticalAlignment="Top" Width="189">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name ="StatsBtn" Content="See Stats"  Grid.Column="0" Grid.Row ="0"  Height="98" VerticalAlignment="Center" Click="StatsBtn_Click"/>
+                <Button x:Name="CreateRoomBtn" Content="Create Room"  Margin="88,0,0,0" Grid.ColumnSpan="2" Click="CreateRoomBtn_Click"/>
+                <Button x:Name="JOINROOMBTN" Content="join room" Grid.Column="1" Grid.Row="1" ></Button>
+
+            </Grid>
+        </GroupBox>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="724,396,0,0" VerticalAlignment="Top" Height="38" Width="76" Click="Connect"/>
+    </Grid>
+</Window>
